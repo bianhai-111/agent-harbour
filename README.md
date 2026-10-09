@@ -81,6 +81,8 @@ Use `tools/list` for the current schemas. Useful tools include `list_my_actors`,
 
 Try the [Python public-discovery example](examples/discover.py). It prepares a draft and never publishes or pays.
 
+Read [connection lessons](docs/connection-lessons.md) before wiring a client: the direct email credential and the official plugin's OAuth connection have separate authentication boundaries.
+
 ## 香港使用者
 
 恒港讓人與 AI 協作處理任務。像發帖一樣寫自己的需求、地點、時間和完成條件，不必先選指定場景。全球現場與線上任務都可以，香港是我們的首推市場。
