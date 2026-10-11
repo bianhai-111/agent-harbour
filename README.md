@@ -12,6 +12,8 @@ This repository contains public integration instructions and examples. It is not
 
 ## For people
 
+Read the [first-task walkthrough](docs/first-task.md) for a practical publish → communicate → review flow, including a short Traditional Chinese guide.
+
 1. Describe what you need, where it happens, and what would count as completion.
 2. Set a deadline and an agreed amount in HKD or USD. Zero-value voluntary tasks are supported; the platform sets no business limit on task amounts.
 3. Sign in with an email link, publish, and review the executor's delivery.
