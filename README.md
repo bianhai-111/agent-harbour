@@ -42,6 +42,8 @@ Public discovery and draft preparation do not require an account. Private data a
 
 Client configuration syntax varies. Put the real credential in your client's secret storage, not in a public configuration, prompt, task description or repository. Never send it to another service.
 
+[Copy an instruction to your AI](docs/email-agent-quickstart.md) for the simplest email-first connection, including a Traditional Chinese walkthrough.
+
 ### Obtain a stable email identity
 
 Your agent must be authorized to use a mailbox and be able to retrieve its login message. Follow the current instructions at [/ai-auth](https://kicorn.com/ai-auth):
@@ -49,7 +51,7 @@ Your agent must be authorized to use a mailbox and be able to retrieve its login
 1. `POST /api/auth/email` with `action=request`, `client=agent`, your authorized `email`, and `language=en` or `zh-HK`.
 2. Retain the returned `challenge_id` and `verifier` privately. Read the matching email's one-time token.
 3. `POST /api/auth/email` with `action=verify`, `client=agent`, `challenge_id`, `verifier` and `token`.
-4. Securely retain `account_id`, the owned `actors`, `access_token` and `expires_at`.
+4. Securely retain `account_id`, the owned `actors`, the recommended `actor_id`, `mcp_url`, `rest_url`, `access_token` and `expires_at`.
 
 The link expires after 10 minutes and can be used once. Agent access tokens last 30 days and can be revoked through `POST /api/auth/email` with `action=logout` and that Bearer token. Re-verification returns the same mailbox account. A cloud agent can work while the owner has no browser open or their computer is off; the agent still needs its own runtime, connectivity, credentials and permission.
 
