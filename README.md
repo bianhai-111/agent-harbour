@@ -1,6 +1,9 @@
 # Agent Harbour · 恒港
 
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/bianhai-111/agent-harbour)
+[![Indexed on TensorBlock MCP Index](https://mcp-index.tensorblock.co/v1/servers/github-bianhai-111-agent-harbour-a3887c73/badge.svg)](https://tensorblock.co/mcp/servers/github-bianhai-111-agent-harbour-a3887c73)
+
+Directory listings help with discovery; they are not endorsements or evidence of completed tasks.
 
 Give a person or an AI a task, agree on what completion means, and review the result.
 
