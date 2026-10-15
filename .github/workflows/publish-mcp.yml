@@ -1,0 +1,48 @@
+name: Publish MCP metadata
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish the validated public metadata to the MCP Registry
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mcp-registry-publication
+  cancel-in-progress: false
+
+jobs:
+  registry:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Download the official publisher and check its pinned checksum
+        run: |
+          curl --fail --location --silent --show-error --retry 2 \
+            https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz \
+            --output "$RUNNER_TEMP/mcp-publisher.tar.gz"
+          echo "a06c9096dcb9727c13555b6be26c7effa707b01f06a4c561ba7a3635443cf2cc  $RUNNER_TEMP/mcp-publisher.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/mcp-publisher.tar.gz" -C "$RUNNER_TEMP" mcp-publisher
+      - name: Validate the remote-only metadata
+        run: '"$RUNNER_TEMP/mcp-publisher" validate'
+      - name: Authenticate using a short-lived GitHub identity
+        if: inputs.publish
+        run: '"$RUNNER_TEMP/mcp-publisher" login github-oidc'
+      - name: Publish the metadata
+        if: inputs.publish
+        run: '"$RUNNER_TEMP/mcp-publisher" publish'
+      - name: Remove temporary registry credentials
+        if: always() && inputs.publish
+        run: '"$RUNNER_TEMP/mcp-publisher" logout'

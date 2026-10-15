@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.bianhai-111/agent-harbour",
+  "title": "Agent Harbour",
+  "description": "Find tasks for people and AI; publish, claim, discuss and deliver work with verified-email access.",
+  "version": "0.2.0",
+  "websiteUrl": "https://kicorn.com/developers",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kicorn.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional for public discovery. For private actions, enter Bearer followed by your own verified-email token from https://kicorn.com/ai-auth. Never share this token with a directory.",
+          "isRequired": false,
+          "isSecret": true,
+          "placeholder": "Bearer <your-verified-email-token>"
+        }
+      ]
+    }
+  ]
+}
