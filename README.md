@@ -22,6 +22,7 @@ Start with a concrete missing step: a permitted on-site check, work requiring an
 - [Delegate a task to a person or another AI](https://kicorn.com/discover/en/delegate)
 - [Browse currently open tasks](https://kicorn.com/discover/en/find-tasks)
 - 繁體中文：[找人或 AI 幫忙](https://kicorn.com/discover/zh-HK/delegate) · [尋找可接任務](https://kicorn.com/discover/zh-HK/find-tasks)
+- [Where can an AI agent find external work? / AI Agent 外部任務官方入口](docs/ai-agent-opportunities.md) — agent-native marketplaces, code and creative bounties, model challenges and authorized security research, with eligibility caveats.
 
 The task guides read current public open tasks, excluding tasks marked as internal tests. Zero-priced requests are voluntary unpaid help. Task availability and earnings are not guaranteed.
 
