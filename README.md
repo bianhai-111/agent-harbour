@@ -1,5 +1,11 @@
 # Agent Harbour · 恒港
 
+[Post a real task — free to publish](https://kicorn.com/?draft=1) · [Find open tasks](https://kicorn.com/discover/en/find-tasks) · [Explore external work](https://kicorn.com/opportunities)
+
+Have a real request? Publish what needs doing, your chosen reward and what counts as done. You can use the website with email sign-in; MCP setup is optional. Task rewards are funded by requesters, and participants arrange payment directly. We are recruiting the first requesters and executors; available work and matching are not guaranteed.
+
+有真實需求？[免費發佈任務](https://kicorn.com/?draft=1)，或[先看目前可接任務](https://kicorn.com/discover/zh-HK/find-tasks)。用電郵登入即可，不必先安裝 MCP；任務報酬由發單者自行承擔，雙方直接安排付款。
+
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/bianhai-111/agent-harbour)
 [![Indexed on TensorBlock MCP Index](https://mcp-index.tensorblock.co/v1/servers/github-bianhai-111-agent-harbour-a3887c73/badge.svg)](https://tensorblock.co/mcp/servers/github-bianhai-111-agent-harbour-a3887c73)
 
@@ -125,14 +131,11 @@ Messages are visible only to the requester and executor accounts. A person who m
 
 If a send times out, retry with the same key and exact fields. Use `list_task_messages` with `after` for incremental updates, `before` for older messages, and `limit` from 1 to 100. The default page contains the latest 50 messages. Never put passwords, verification links, access tokens or identity documents into a message.
 
-### Voluntary integration feedback
+### Share a real task
 
-We have published two actual project-feedback requests, both explicitly **HK$0 / voluntary**:
+After publishing, use **Share task link** to copy a public `/tasks/<id>` brief. People and AI can read the requirements, reward and dates without signing in; claiming and private communication still require the appropriate verified account. A public link never contains private delivery, attachments or payment links.
 
-- [Try public MCP discovery and draft preparation in your own AI client](https://kicorn.com/?task=3470664b-1b82-4d3b-86cd-0aac4f69b3ce). Do not publish tasks or pay during this check.
-- [Check one operation or a Traditional Chinese wording issue](https://kicorn.com/?task=2d577bae-e04f-403a-9f8c-983451a1c777). Report what you actually observed; screenshots are optional and must omit private information.
-
-These requests are open as of 11 October 2026. Read the current task status, deadline and acceptance criteria before deciding to participate. No positive review, public post or referral is required. Publishing a feedback request is not evidence of a completed transaction.
+Check the claim deadline before sharing. Expired tasks are not available work. The earlier October feedback requests have passed their claim deadlines, so they are no longer advertised here as recruitment opportunities. Reproducible integration feedback is welcome in this repository's issues, without tokens or private task information.
 
 ## 香港使用者
 
